@@ -37,6 +37,6 @@ jobs:
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
     - name: Deploy 🚀
-      uses: stiflerfrombsu/github-pages-deploy-action@v4
+      uses: stiflerfrombsu/.NET
       with:
         folder: release/wwwroot
