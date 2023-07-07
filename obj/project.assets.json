@@ -1767,9 +1767,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/sergeipo/test1/test1.csproj",
-      "projectName": "test1",
-      "projectPath": "/Users/sergeipo/test1/test1.csproj",
+      "projectUniqueName": "/Users/sergeipo/test1/test.csproj",
+      "projectName": "test",
+      "projectPath": "/Users/sergeipo/test1/test.csproj",
       "packagesPath": "/Users/sergeipo/.nuget/packages/",
       "outputPath": "/Users/sergeipo/test1/obj/",
       "projectStyle": "PackageReference",

@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "test1": {
+    "test": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

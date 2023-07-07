@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UReGH6zbQQET0xsLDZdB/5kodldiSgebqQU4MtxEAXD6elSH0we28S5zIdTLbBWHfiE8YPuXgQYwga7V8HkP3g==",
+  "dgSpecHash": "bsMR99AV8gJKf+S2fsPTjn41NytV8WWu8P5IRdm70CBMo8oZjzFWPQcKQbH7va+x3/siPXts9+9wxdvs4fU0/Q==",
   "success": true,
-  "projectFilePath": "/Users/sergeipo/test1/test1.csproj",
+  "projectFilePath": "/Users/sergeipo/test1/test.csproj",
   "expectedPackageFiles": [
     "/Users/sergeipo/.nuget/packages/microsoft.aspnetcore.authorization/6.0.3/microsoft.aspnetcore.authorization.6.0.3.nupkg.sha512",
     "/Users/sergeipo/.nuget/packages/microsoft.aspnetcore.components/6.0.3/microsoft.aspnetcore.components.6.0.3.nupkg.sha512",
