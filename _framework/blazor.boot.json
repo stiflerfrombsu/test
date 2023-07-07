@@ -2,7 +2,7 @@
   "cacheBootResources": true,
   "config": [ ],
   "debugBuild": false,
-  "entryAssembly": "test",
+  "entryAssembly": "BlazorGitHubPages",
   "extensions": {
     "blazor": { }
   },
@@ -10,6 +10,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
+      "BlazorGitHubPages.wasm": "sha256-W4oGoOScRJPwyloibFPmk4PX8rOlkQ4kknE19qSkboU=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-hfsC4\/hSo4MtR3eFyZORi5LBiH5ZE7QQUJksj9iJmQ0=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-SyLuzTvjkfT8kudfrwnZkBUoamle2u1X9o6Pv+BB\/mI=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-XI4PyYBh2\/voFToLf\/LtU5r9pQn18hSAJQzZc5ig+QU=",
@@ -31,13 +32,12 @@
       "System.Net.Http.Json.wasm": "sha256-vIi4G0ldTJTo173lfOPtUGxSie44hdBcDnYDiI0x9ew=",
       "System.Net.Http.wasm": "sha256-FWI8tIas2iN6tJCdadHGvWdD8Lc6HUg8EkMCLvLhfUo=",
       "System.Net.Primitives.wasm": "sha256-fqVZDyQcsSbnsIPISDitYE\/44GztpnyBe+4U+oPwTZM=",
-      "System.Private.CoreLib.wasm": "sha256-2\/pQzgyvc8RYMExd7WnRmUb5iS55uGxdqLslSRVRgT4=",
+      "System.Private.CoreLib.wasm": "sha256-oP03wTxvuCjuTb3Fts84ft7WZ6Ba2yVfkwOhlEZknwg=",
       "System.Private.Uri.wasm": "sha256-O9NQkwqOLl6LzYL5gaztxALpMYsGv2qH2xyqIKRJzsE=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-yg840v+\/1e0WWuZYR11tF0SPgJ+arogJnOk9xjAOBjs=",
-      "System.Runtime.wasm": "sha256-Gv2lNl0vGVCtZIAM6MtkP\/0Hs1JxSTrJAqIcZ7TRe+8=",
+      "System.Runtime.wasm": "sha256-hD+2pliv3QKFiM\/cGvAPqNJEhG3j92Y\/8EPp6XoccwY=",
       "System.Text.Encodings.Web.wasm": "sha256-GZ0BEUBWgpIM2cAajrjqh8f+S6wIigfkkb0jrWMd510=",
-      "System.Text.Json.wasm": "sha256-ICpJI0syqK2Na1W2li\/mgXgBWoev1ixb13oUdRXIyNw=",
-      "test.wasm": "sha256-pz+KQjHQU7W\/aGe9AnXqqWd\/XjVcezryyqHtMmcasRQ="
+      "System.Text.Json.wasm": "sha256-ICpJI0syqK2Na1W2li\/mgXgBWoev1ixb13oUdRXIyNw="
     },
     "extensions": null,
     "lazyAssembly": null,
