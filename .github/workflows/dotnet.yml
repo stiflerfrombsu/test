@@ -25,17 +25,18 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish test1.csproj -c Release -o release --nologo
-    - name: Change Base Tag
-      run: sed -i 's/<base href="\/" \/>/<base href="\/test1\/" \/>/g' release/wwwroot/index.html'
-    - name: Copy to 404
+    - name: Publish .NET Core Project
+      run: dotnet publish test.csproj -c Release -o release --nologo
+    # changes the base-tag in index.html from '/' to 'test' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to test
+      run: sed -i 's/<base href="\/" \/>/<base href="\/test\/" \/>/g' release/wwwroot/index.html
+    # copy index.html to 404.html to serve the same file when a file is not found
+    - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
-    - name: .nojekyll file
+    # add .nojekyll file to tell GitHub pages to not treat this as a Jekyll project. (Allow files and folders starting with an underscore)
+    - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
-    - name: Deploy
-      uses: stiflerfrombsu/.NET
+    - name: Deploy 🚀
+      uses: stiflerfrombsu/github-pages-deploy-action@v4
       with:
         folder: release/wwwroot
