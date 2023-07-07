@@ -1,6 +1,3 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
 name: .NET
 
 on:
@@ -25,12 +22,12 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build
+      run: dotnet build --no-restore
     - name: Publish .NET Core Project
-      run: dotnet publish test.csproj -c Release -o release
-    # changes the base-tag in index.html from '/' to 'test' to match GitHub Pages repository subdirectory
-    - name: Change base-tag in index.html from / to test
-      run: sed -i 's/<base href="\/" \/>/<base href="\/test\/" \/>/g' release/wwwroot/index.html
+      run: dotnet publish BlazorGitHubPages.csproj -c Release -o release --nologo
+    # changes the base-tag in index.html from '/' to 'BlazorGitHubPages' to match GitHub Pages repository subdirectory
+    - name: Change base-tag in index.html from / to BlazorGitHubPages
+      run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorGitHubPages\/" \/>/g' release/wwwroot/index.html
     # copy index.html to 404.html to serve the same file when a file is not found
     - name: copy index.html to 404.html
       run: cp release/wwwroot/index.html release/wwwroot/404.html
