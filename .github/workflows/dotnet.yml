@@ -8,7 +8,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+permissions:
+  contents: write
 jobs:
   build:
 
@@ -26,3 +27,15 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Publish
+      run: dotnet publish test1.csproj -c Release -o release --nologo
+    - name: Change Base Tag
+      run: sed -i 's/<base href="\/" \/>/<base href="\/test1\/" \/>/g' release/wwwroot/index.html'
+    - name: Copy to 404
+      run: cp release/wwwroot/index.html release/wwwroot/404.html
+    - name: .nojekyll file
+      run: touch release/wwwroot/.nojekyll
+    - name: Deploy
+      uses: stifler.bsu/github-pages-deploy-action@v4
+      with:
+        folder: release/wwwroot
